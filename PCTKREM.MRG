@@ -1,0 +1,112 @@
+41 ' NOTE: Merge this file with PC-TALK.BAS to see full remarks
+42 ' (The resulting program will require more than 64K to run in BASIC.)
+43 ' Copyright (c) 1984 The Headlands Press, Inc.
+44 '
+100 ' Initialize Variables
+105 '
+200 ' Get Defaults
+300 ' Start-up
+305 '
+350 PRINT TAB(45)"(REM version - requires 128K)
+500 ' Main Input/Output
+505 '
+510 '-keyboard
+600 '-comm port
+700 '-check status
+800 '-printer buffer
+1000 ' Alt-Key Input
+1005 '
+1200 ' Alt-key Display
+1205 '
+1500 ' Extended Codes
+1505 '
+1565 '-F-keys/Alt-keys
+1595 '-echo/message/print
+1615 '-elapsed time/redial/screendump/defaults/exit
+1645 '-logged drive/delete/clearsc/width alarm/menu/break
+1681 '-more Extended Codes can go here (see p.G-6 IBM BASIC manual)
+1682 '
+1685 GOTO 515 'DON'T remove this line! (failsafe to return to terminal)
+2000 ' Command Summary
+2005 '
+2450 '
+2455 '
+2500 '-return Q$ w/ max len QL
+2555 '-convert Q$ to uppercase
+2600 '-to/from line 25
+2650 '-destructive backspace
+2700 '-reopen files subrout
+2800 '-clear menu line
+3000 ' Receive File
+3005 '
+3200 ' Transmit File
+3205 '
+3400 ' View File
+3405 '
+3500 ' File Specs
+3505 '
+3620 '-file directory subrout
+3800 ' Screendump
+3805 '
+3900 ' Delete File
+3905 '
+4000 ' Transmit
+4005 '
+4065 '-xon/xoff subrout
+4200 '-transmit last block
+4400 '-line pacing subrout
+4500 ' Receive w/ XMODEM
+4505 '
+4540 '-check block
+4630 '-terminate
+4700 'Transmit with XMODEM
+4705 '
+4750 '-hold for ACK
+4810 '-build block
+4840 '-terminate
+4900 ' XMODEM subroutines
+4920 '-hold for SOH
+4960 '-test for abort
+4970 '-purge buffer
+4980 '-set/check delay
+5000 ' Comm Params
+5005 '
+5200 ' New Defaults
+5205 '
+5400 '-create default file
+5600 '-update values
+5800 '-default subrout
+6000 ' Dialing Directory
+6005 '
+6025 '-write to screen
+6080 '-initial choice
+6200 '-dial entry
+6300 '-manual dialing
+6400 '-revise
+6470 '-name & number
+6500 '-comm params
+6555 '-echo & messages
+6590 '-strip chars
+6650 '-pacing
+6800 '-write new info
+6825 '-modem$ & service$
+6850 '-clear directory
+6900 '-message area subrout
+7000 ' Function Key Directory
+7005 '
+7100 '-proceed?
+7200 '-revise
+7275 '-new input string
+7400 '-write new info
+7420 '-create directory
+7435 '-message area subrout
+8000 ' Redial
+8005 '
+8200 ' Elapsed Time
+8205 '
+8900 ' Error Subrout
+8905 '
+9000 ' Error Traps
+9005 '
+9900 '-if not trapped
+

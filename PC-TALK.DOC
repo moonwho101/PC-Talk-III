@@ -1,0 +1,4826 @@
+
+
+
+
+
+
+
+
+
+
+	  === The PC-TALK III User's Guide starts on the next page ===
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							      850502
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	       ---------------------------------------------------
+
+
+			     ===== PC-TALK III =====
+
+	      Communications Program for The IBM Personal Computer
+
+
+
+		    === User's Guide by Andrew Fluegelman ===
+
+	       ---------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	       === FREEWARE - P.O. Box 862, Tiburon, CA 94920 ===
+
+		  Copyright (c) 1984 The Headlands Press, Inc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---
+
+
+
+
+
+
+				=== Contents ===
+
+
+
+
+	Features of PC-TALK III         			4
+	Summary of Commands					6
+	Making Working Copies of PC-TALK			9
+	Starting PC-TALK				       11
+
+
+	=== Screen, Keyboard, and Printing ===
+
+	Echo:  Alt-E					       13
+	The Width Alarm: Alt-W				       13
+	Printscreen: Shift-PrtSc			       14
+	Simultaneous Printout: Ctrl-PrtSc (or Ctrl-PgUp)       14
+	Screendump: Alt-S				       16
+	Clearscreen: Alt-C				       16
+
+
+	=== Receiving and Transmitting Files ===
+
+	Receiving a File: Alt-R (or PgDn)		       17
+	Transmitting a File:  Alt-T			       19
+	The Binary transmit option: '=b'                       20
+	The Pacing transmit option: '=p'                       21
+	XMODEM Transmitting and Receiving: '=x'                24
+	A Note on Communications Terminology		       26
+
+
+	=== More File Commands ===
+
+	Status Messages: Alt-M				       27
+	Viewing a File: Alt-V				       28
+	Deleting a File: Alt-Y				       29
+	The Logged Drive: Alt-L 			       29
+	File Specification Conventions			       30
+
+
+	=== Dialing ===
+
+	The Dialing Directory: Alt-D			       32
+	Adding to the Directory 			       34
+	Other Directory Options 			       35
+	Auto-dialing					       36
+	Long Distance Services:  '+#' and '-#'                 36
+	Manual Dialing: 'm'                                    38
+	Redialing: Alt-Q				       38
+	Stripping and Converting Characters		       39
+	Pacing Instructions				       41
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---
+
+
+
+
+
+
+
+	=== Parameters and Defaults ===
+
+	Communications Parameters: Alt-P		       44
+	Program Defaults: Alt-F 			       45
+
+
+	=== Input Strings ===
+
+	The Function Key Directory: Alt-K (or Alt-J)	       52
+	Using the Function Key Assignments		       53
+        Hanging Up the Modem                                   55
+	Temporary Alt Keys: Alt-1 through Alt-0 	       55
+
+
+	=== Miscellaneous Features and Commands ===
+
+	Elapsed Time: Alt-Z				       58
+	Exit: Alt-X					       58
+	Sending a Break Signal: Ctrl-End		       58
+	Command Summary: Home key			       59
+	Toggle Commands 				       59
+
+
+	=== More Applications and Advanced Features ===
+
+	XON/XOFF: Alt-O 				       60
+	Communications Errors: <<>> and <<OVERFLOW>>	       60
+
+
+	=== PC-TALK III File Information ===
+
+	Programming Information 			       63
+	Copying PC-TALK 				       64
+	Modifying PC-TALK				       64
+	Thank You!					       66
+	FREEWARE					       67
+
+	Appendix A: Communications Parameters		       69
+	Appendix B: The XMODEM Protocol 		       70
+        Invoice						       71
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 4
+
+
+
+
+
+                       === Features of PC-TALK III ===
+
+
+	This brief summary is to acquaint you with some of the 
+	key features in PC-TALK III.  Each of these features is
+	described in detail in the documentation.
+
+
+	1. PC-TALK III is supplied in an interpreter BASIC source code
+	version (PC-TALK.BAS) for systems with 64K of memory and a
+	compiled BASIC version (PC-TALK.EXE) for systems with 128K or
+	more of memory.  The .EXE version will give optimum performance
+	and is recommended if you have sufficient memory.
+
+	To run PC-TALK ...
+	-- If you have 64K of memory, type 'TALK64' <Enter>.
+	-- If you have 128K or more of memory, type 'TALK128' <Enter>.
+
+	2. The 'fast' mode from previous versions has been eliminated.
+	All features now operate fully at up to 1200 baud in both the
+	BASIC interpreter and the BASIC compiled version.
+
+	3. A Screendump feature (Alt-S) now permits writing the contents
+	of the screen to a disk file.
+
+	4. A margin Width feature (Alt-W) signals when keyboard input has
+	exceeded a specifiable right margin.
+
+	5. Three Transmit options are now provided for transmitting
+	binary files (=b), for transmitting files with line pacing (=p),
+	and for transmitting and receiving files using the XMODEM error-
+	checking protocol (=x).
+
+	6. The Dialing Directory (Alt-D) has been expanded to sixty entry
+	capacity.  Optional parameters allow selective character
+	stripping and/or converting and for storing pacing instructions
+	for each entry.
+
+	7. An auto-redial feature has been added (Alt-Q).
+
+	8. There are now forty possible permanent input strings (Alt-K).
+	These permanent strings are now stored to be input with the
+	Function keys in combination with the Alt, Shift, and Ctrl keys.
+
+	9. The temporary input strings (Alt-=) have been switched to the
+	ten key combinations Alt-1 through Alt-0.
+
+	10. Because of the expansion of the Dialing Directory and the
+	Function Key Directory, the special keys for dialing CompuServe
+	and the Source and for sending specific commands to these
+	networks have been eliminated.
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 5
+
+
+	11. A routine has been added for interactively specifying and
+	changing all program defaults while the program is running (Alt-
+	F).
+
+	12. The conventions for specifying files and input strings within
+	the program have been standardized.  Control characters can now
+	be specified as part of input strings.
+
+
+	Even if you are familiar with earlier versions of PC-TALK, it is
+	recommended that you read through the entire documentation, most
+	of which has been thoroughly revised.
+
+	The PC-TALK III User's Guide is 70 pages long.  It is supplied on
+	a file called PC-TALK.DOC, which is either on the program disk,
+	or on a separately labeled disk if two disks have been provided.
+
+	To print the User's Guide, see the instructions at paragraph 9 of
+	the following section, "Making Working Copies of PC-TALK."
+
+
+	I hope that you find PC-TALK III to be more useful, and just as
+	friendly, as version 2.00.
+
+
+						     - Andrew Fluegelman
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 6
+
+
+
+
+
+			   === Summary of Commands ===
+
+
+	Alt-E		   When activated, Echoes keyboard input to the
+			   screen. (Toggle) USE IF YOUR KEYBOARD INPUT IS
+			   BLANK OR DOUBLE.
+
+
+	Shift-PrtSc	   Prints current screen contents at any time.
+
+
+	Ctrl-PrtSc	   When activated, simultaneously prints all
+	(or Ctrl-PgUp)	   screen output to the printer. (Toggle)
+
+
+	Alt-R		   Starts/stops routines to Receive input from
+	(or PgDn)	   the communications port to files on disk.
+
+
+	Alt-T		   Starts/stops routines to Transmit files from
+	(or PgUp)	   disk through the communications port.
+
+
+	Alt-V		   Starts/stops routine to View a file which has
+			   been saved to disk.
+
+
+	Alt-Y		   Permits deleting a file from disk.
+
+
+	Alt-D		   Calls up the Dialing Directory. Permits
+			   storing parameters for 60 phone numbers and
+			   auto-dialing.
+
+
+	Alt-Q		   Redials the last number dialed.
+
+
+	Alt-M		   When activated, sends status Messages as part
+			   of the transmit and receive routines.
+			   (Toggle)
+
+
+	Alt-P		   Permits changing the communications Parameters.
+
+
+	Alt-F		   Permits temporary or permanent changes to the
+			   program defaults.
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 7
+
+
+
+
+	Alt-K		   Calls up the Function Key Directory.  Permits
+	(or Alt-J)	   specifying up to 40 Function key combinations
+			   to input permanent i.d. #s and logon
+			   sequences.
+
+
+	Alt-=		   Permits programming of keys Alt-1 through Alt-0
+			   (Alt-equals) as temporary input while the
+			   program is running.
+
+
+	Alt-S		   Writes contents of the screen to a file
+			   SCRNDUMP.PCT on the Logged drive.
+
+
+	Alt-L		   Changes the Logged drive for file specifications.
+
+
+	Alt-W		   Sets an optional Width alarm for keyboard input.
+
+
+	Alt-Z		   Displays the elapsed time for the current call.
+
+
+	Alt-C		   Clears the screen.
+
+
+	Alt-O		   Permits re-starting transmission manually when
+			   the remote computer has sent an XOFF signal.
+
+
+	Alt-X		   Exits the program and returns to DOS.
+
+
+	Ctrl-End	   Sends a 'Break' signal to the remote computer.
+
+
+	Del		   Sends a 'Rubout' character (ASCII 127)
+
+	Home		   Displays an on-screen summary of these commands.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 8
+
+
+
+
+	File Specification Commands:
+
+
+	  ? or	?+[spec] - When given as response to a file specification,
+			   lists files currently on logged or specified
+			   drive. Wild card characters * and ? are allowed.
+
+
+		 <space> - When given as response to file specification,
+			   re-inputs the last file Transmitted, Received,
+			   or Viewed.
+
+
+		<Enter>  - When given as response to file specification,
+			   cancels Transmit, Receive, View, and Delete routines.
+
+
+		=p[n][c] - When added to the end of a Transmit file
+			   specification, paces transmission one line at a
+			   time--either every n seconds or after the
+			   prompt c is received.
+
+
+		    =b	 - When added to the end of a Transmit file
+			   specification, permits transmitting file in
+			   binary format.
+
+
+		    =x	 - When added to the end of a Transmit or Receive
+			   file specification, invokes the XMODEM error-
+			   checking protocol.
+
+
+
+	String Specification Commands:
+
+
+		     }	 - Signifies a carriage return as part of the string.
+
+
+	<space><Enter>	 - Clears a previously specified string.
+
+
+	       <Enter>	 - Leaves a previously specified string unchanged.
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 9
+
+
+
+
+
+		    === Making Working Copies of PC-TALK ===
+
+
+	Before you use your PC-TALK program disk(s), you should make a
+	working copy of the program.  Follow these steps carefully:
+
+
+	(Please note that you may have been provided with two disks,
+	marked "PC-TALK.III" and "PC-TALK.DOC", or a single disk marked
+	"PC-TALK.III".  If you have been provided with a single disk, it
+	contains all of the necessary PC-TALK files.)
+
+
+	1. Place your own copy of PC-DOS (any version)
+	in drive A and press the Ctrl-Alt-Del keys simultaneously.  Enter
+	the date and time, when required.  You should see the DOS A> prompt.
+
+
+	2. Place a blank disk (or one that can be REFORMATTED) in drive B.
+
+
+	3. Type 'FORMAT B:/S' <Enter>.  This will format the disk in
+	drive B with the DOS system and command files.
+
+
+	4. Type 'COPY BASIC.COM B:' <Enter>. This will copy the file
+	BASIC.COM to the disk in drive B.
+
+
+	5. Now remove the DOS disk from drive A and insert the PC-TALK.III
+	program disk in drive A.
+
+
+	6. Type 'COPY *.* B:' <Enter>. This will copy all the files from
+	the program disk onto the disk in drive B.
+
+
+	7. Remove the program disk from drive A and store it in a safe
+	place.	Take the disk from drive B and label it "PC-TALK.III".
+	Use this as your working program disk.
+
+
+	8. If you have been provided a separate disk marked "PC-TALK.DOC",
+	repeat steps 1 through 7 above, using the PC-TALK.DOC disk.
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 10
+
+
+
+
+	9. Before you start using the program, please make sure that you
+	have printed and read the PC-TALK III User's Guide.
+
+	-- If you have been provided with two disks, place the working
+	copy of the PC-TALK.DOC disk in drive A.
+
+	-- If you have been provided with one disk, place the working
+	copy of the PC-TALK.III disk in drive A.
+
+	Now type 'PRINTDOC' <Enter> and follow the screen prompts.  This
+	will print the file PC-TALK.DOC.
+
+
+	10. You are now ready to run PC-TALK. Place the working program
+	disk marked PC-TALK.III in drive A and proceed with the following
+	instructions, "Starting PC-TALK".
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 11
+
+
+
+
+
+
+			    === Starting PC-TALK ===
+
+
+
+	First make sure that PC-DOS is loaded so that you see the A>
+
+	prompt. Place the disk marked "PC-TALK.III" in drive A. Then...
+
+
+	-- If you have 64K of memory, type 'TALK64' <Enter>.
+
+	   This will load and run the BASIC file PC-TALK.BAS.
+
+
+	-- If you have 128K or more of memory, type 'TALK128' <Enter>.
+
+	   This will load and run the compiled BASIC file PC-TALK.EXE.
+
+	   You can also run PC-TALK.EXE by simply typing 'PC-TALK' <Enter>.
+
+
+
+	When you see the prompt "===Proceed ..." PC-TALK is in operation.
+
+	At this point, you should turn on your modem, if you have not
+
+	already done so.
+
+
+	-- If you have a direct connection modem:
+
+	   You can proceed to send the appropriate modem commands
+
+	   directly from the keyboard. (Making use of auto-dialing
+
+	   features is described in the documentation under "The Dialing
+
+	   Directory.")
+
+
+	-- If you have an acoustic modem:
+
+	   Dial the phone number you wish, place the telephone receiver
+
+	   in the modem cradle, and switch to 'Data'. Once you have made
+
+	   a connection, you can proceed with keyboard instructions.
+
+
+	At this point, your PC has been set up as a "dumb" terminal,
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 12
+
+
+	connected with the remote computer.  You can send information to
+
+	the remote computer by typing on the keyboard, and see
+
+	information sent by the remote computer displayed on your screen.
+
+
+	NOTE: IF YOU CAN'T SEE YOUR KEYBOARD INPUT, press Alt-E to put
+
+	the program into Echo mode.
+
+
+	PC-TALK is capable of doing many "smart" things too, such as
+
+	receiving and sending disk files, dialing phone calls, and
+
+	storing commands for future use.  All the program features are
+
+	described in the documentation, which is contained in a file on
+
+	the program disk called PC-TALK.DOC.
+
+
+	********** PLEASE PRINT AND READ THE DOCUMENTATION! **********
+
+	This will save you from having unanswered questions and greatly
+
+	increase your enjoyment of the program.
+
+
+	To print the documentation, follow these instructions:
+
+
+	-- If you have been provided with two disks, place the working
+
+	   copy of the PC-TALK.DOC disk in drive A.
+
+	-- If you have been provided with one disk, place the working
+
+	   copy of the PC-TALK.III disk in drive A.
+
+
+	*** Now type 'PRINTDOC' <Enter> and follow the screen prompts.
+
+	This will print the file PC-TALK.DOC.  Please take some time to
+
+	read through the documentation before trying to use the program.
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 13
+
+
+
+
+
+
+		     === Screen, Keyboard, and Printing ===
+
+
+
+	Echo:  Alt-E
+
+
+	With some systems, the remote computer will send back to your
+
+	screen the characters you type at the keyboard.  This is known as
+
+	"full duplex" communications.  In other cases, the remote
+
+	computer will not send back the characters you type ("half
+
+	duplex").  You can adjust for either of these situations with the
+
+	Echo option, which is toggled on and off by pressing Alt-E.
+
+
+	If you can't see your own keyboard input on the screen once
+
+	communications are in progress, turn on the Echo option (Alt-E).
+
+	This might make your modem commands appear as double characters,
+
+	but should produce proper screen output during communications.
+
+
+	If your regular communications input appears as double charac-
+
+	ters, disable the Echo function by pressing Alt-E.
+
+		    ----------------------------------------
+
+
+	The Width Alarm: Alt-W
+
+
+	Many remote systems place a limit on the length of a line which
+
+	can be entered.  It can be a nuisance to have to keep track of
+
+	this limit when typing on the screen.
+
+
+	As you send information using the keyboard, you will notice that
+
+	the program beeps when you type more than 70 characters on a
+
+	line.  This is the Width alarm feature.  It operates like the
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 14
+
+
+
+	margin alarm on a typewriter.
+
+
+	The beeps will continue until you press the <Enter> key or until
+
+	you have typed more than ten additional characters.  The beeps
+
+	are merely reminders--the characters are still sent as typed,
+
+	even if the alarm sounds.
+
+
+	You can specify a different margin width by pressing Alt-W.  If
+
+	you want to disable the Width alarm, enter 0 (zero) as the value
+
+	for the margin width.
+
+		    ----------------------------------------
+
+
+	Printscreen: Shift-PrtSc
+
+
+	At any time during program operation, hitting the Shift key in
+
+	combination with the PrtSc key will print the contents of the
+
+	screen to the printer. (This is the regular DOS function).
+
+		    ----------------------------------------
+
+
+	Simultaneous Printout: Ctrl-PrtSc (or Ctrl-PgUp)
+
+
+	You can also produce simultaneous printout while communications
+
+	are in progress by pressing Ctrl-PrtSc or Ctrl-PgUp. A message
+
+	will indicate "===PRINTOUT ON===" and all subsequent information
+
+	displayed on the screen will be sent to the printer as well.
+
+
+	You can disable the Printout function by hitting Ctrl-PrtSc or
+
+	Ctrl-PgUp again. A message "===PRINTOUT OFF===" will be displayed
+
+	and the Printout function will be toggled off. The Printout
+
+	function can be turned on and off without disturbing
+
+	communications.
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 15
+
+
+
+
+	If the Printout function is invoked when the printer is not
+
+	turned on, a message "===CHECK PRINTER===" will appear, the function
+
+	will remain off, and communications will continue.
+
+
+	**Applications Notes:
+
+	Running the Printout option may slow communications because many
+
+	printers cannot keep pace with the communications rate.  If you
+
+	are communicating at 1200 baud (described below under "Commu-
+
+	nications Parameters") you should not try to run simultaneous
+
+	printout, as you will likely overflow the communications buffer.
+
+	If this happens, the program will attempt to recover by turning
+
+	off the Printout function.
+
+
+	A new feature in PC-TALK III buffers the printout to take correct
+
+	account of backspace characters within each line.
+
+
+	If you happen to run the BASIC interpreter version of the program
+
+	under BASIC 2.0, the Ctrl-PrtSc key will turn on continuous
+
+	printing, but not with PC-TALK's support features described
+
+	above.	In this case, you should use the Ctrl-PgUp key to control
+
+	the Printout function.	(Note, however, that if you have enough
+
+	memory to run BASIC 2.0, you will get better performance by
+
+	running the compiled version of the program, PC-TALK.EXE. See
+
+	"Starting PC-TALK", above.)
+
+		    ----------------------------------------
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 16
+
+
+
+
+
+	Screendump: Alt-S
+
+
+	Another new feature in PC-TALK III allows you to dump the
+
+	contents of the screen to a disk file at any time by pressing
+
+	Alt-S.
+
+
+	When you start the program, the Screendump file is a file on
+
+	drive B called SCRNDUMP.PCT.  Each time you press Alt-S, the
+
+	screen contents is appended to that file.  The date and time is
+
+	automatically recorded for each screendump.
+
+
+	You can specify a different Screendump file from within the
+
+	Default routine (described below).
+
+		    ----------------------------------------
+
+
+	Clearscreen: Alt-C
+
+
+	Pressing Alt-C will clear the screen at any time.  This command
+
+	does not send any character or signal to the remote computer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 17
+
+
+
+
+
+
+		    === Receiving and Transmitting Files ===
+
+
+
+	Receiving a File: Alt-R (or PgDn)
+
+
+	The file receiving routine permits you to save information you
+
+	receive from a remote computer on your own disk files. It
+
+	operates manually and requires no special protocol.
+
+
+	To start the Receiving routine, press Alt-R. The program will ask
+
+	for a drive and filename under which to receive the file.
+
+
+	Once the Receiving routine is in operation, you will see a
+
+	reminder on line 25 of the screen indicating the name of the file
+
+	being received.  From that point on, all information passing
+
+	through the communications port, whether it is being typed from
+
+	your keyboard or coming from the remote computer, will be saved
+
+	to the specified disk file.
+
+
+	To guard against accidentally erasing existing files, if a
+
+	filename is specified that already exists on the disk, the new
+
+	input will be appended to the end of the existing file.
+
+
+	To terminate receipt of the file, press Alt-R once again.  You
+
+	can receive different files to disk, or keep appending to the
+
+	same disk file, many times during a communications session.
+
+
+	**Applications and Advanced Features:
+
+	Certain remote computer systems may send unwanted characters to
+
+	your computer. If you have need to strip or convert certain
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 18
+
+
+
+	characters as they are being received, you can specify those
+
+	characters with the Strip option described below.
+
+
+	PC-TALK can receive binary files without any special file
+
+	receiving specification.  You do have to be careful, however, to
+
+	open and close your file for receiving so that you do not receive
+
+	any extraneous characters or messages from the remote computer.
+
+
+	The recommended procedure for receiving binary files is to have
+
+	the Message option (described below) ON for the receiving
+
+	computer and OFF for the transmitting computer and for the
+
+	transmitting computer operator to give the receiving computer
+
+	ample time to open and close the file.	Please note also that if
+
+	you want to receive a binary file, you must not have any
+
+	stripping in effect and must be communicating at 8 data bits.
+
+	(These communications parameters are described below.)
+
+
+	*** PLEASE NOTE that the best way to receive and transmit
+
+	binary files with PC-TALK is by using the XMODEM error-checking
+
+	protocol, which is described below.
+
+		   ----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 19
+
+
+
+
+
+	Transmitting a File:  Alt-T
+
+
+	Just as you can receive information and store it on disk files,
+
+	you can transmit information from your disk files to the remote
+
+	computer.
+
+
+	The regular file transmitting routine is "plain vanilla" -- it
+
+	requires no special protocol from the remote computer. It can
+
+	therefore be used to send your disk files to virtually any other
+
+	personal computer, to network bulletin boards, and to many large
+
+	computer systems.
+
+
+	To start the Transmit routine, press Alt-T. The program will then
+
+	ask for the specification of the file to be transmitted. Once you
+
+	have given the specification and press the <Enter> key,
+
+	transmission of the file will proceed.
+
+
+	Once transmission is in progress, you will see the text of your
+
+	file displayed on the screen. Line 25 of the screen will indicate
+
+	the name of the file being transmitted and the approximate
+
+	minutes remaining to complete the transmission. The transmission
+
+	routine will terminate automatically at the end of the file.
+
+
+	You can terminate transmission manually at any time by pressing
+
+	Alt-T.
+
+
+	**Applications and Advanced Features:
+
+	The transmitting routine can be used to send files to personal
+
+	computers and to network bulletin board services. When you are
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 20
+
+
+	ready to send your file, start the Transmit routine (Alt-T),
+
+	specify the file to be sent, and press <Enter>.  None of the
+
+	specification prompts you see on your screen will be sent to the
+
+	remote computer -- only the text of your file.
+
+
+	If the remote computer requires a special character to begin
+
+	receipt of the file, it should be sent manually via the keyboard
+
+	prior to giving the Alt-T command.
+
+		    ----------------------------------------
+
+
+	**File Transmitting Options:
+
+
+	PC-TALK offers some advanced transmit options for sending binary
+
+	files, for pacing transmission, and for transmitting with an
+
+	error-checking protocol.  In each case, the option is invoked by
+
+	adding an equals sign plus the letters 'b', 'p', or 'x' to the
+
+	end of the file specification.	Each of these options is
+
+	described below; however, it is recommended that you do not try
+
+	these options until you are familiar with the basic features of
+
+	the program.
+
+		    ----------------------------------------
+
+
+	The Binary transmit option: '=b'
+
+
+	PC-TALK permits transmitting binary files (.COM  and .EXE files
+
+	and BASIC programs not saved in ASCII format).	To transmit a
+
+	binary file, add '=b' to the end of the transmit file
+
+	specification.
+
+
+		 For example, to transmit the file MYFILE.COM, you would
+
+		 give the transmit file specification by typing
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 21
+
+
+
+		 'MYFILE.COM=b' <Enter>. (It does not matter whether the
+
+		 'b' is typed in upper or lower case.)
+
+
+	When you transmit using the binary option, the text of the file
+
+	will not be displayed on the screen.
+
+
+	You must be communicating at 8 data bits (No parity) to transmit
+
+	a binary file. The binary transmit option is an advanced feature.
+
+		    ----------------------------------------
+
+
+	The Pacing transmit option: '=p'
+
+
+	Because of the increased performance of this version of PC-TALK,
+
+	the Transmit routine may operate too fast for some remote
+
+	computers (such as the Source and many mainframe systems).  PC-
+
+	TALK now offers a Pacing option to slow down transmission of
+
+	files.	This feature will send your file to the remote computer
+
+	one line at a time, pausing between lines.
+
+
+	To invoke the Pacing option, specify '=p' following the
+
+	specification of the file to transmit; e.g., 'MYFILE.123=p'.
+
+	At this point you have two options:
+
+
+	-- If you want the line pacing to be governed by a time delay,
+
+	enter a number following the '=p' to indicate how many seconds to
+
+	pause between transmission of lines of your file.
+
+
+		 For example, if you specified 'MYFILE.123=p2', the
+
+		 program would pause approximately two seconds between
+
+		 lines.
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 22
+
+
+	You can enter a fractional number, such as '=p.5' for a half-
+
+	second pause.  You should experiment with your remote system to
+
+	determine the optimum time delay for pacing.
+
+
+	-- The second line pacing option waits for a prompt from the
+
+	remote computer before sending the next line.  This is invoked by
+
+	specifying the character(s) for the prompt immediately following
+
+	the '=p'.
+
+
+		 For example, specifying 'MYFILE.123=p?' would cause the
+
+		 program to wait for the receiving computer to send a
+
+		 question mark before the program continued transmitting
+
+		 the next line.  You can specify a control character as
+
+		 the prompt; for example, '=p' followed by a control-R
+
+		 would cause the program to wait for an ASCII 19.
+
+
+	When paused for a prompt in the line pacing transmit mode, you
+
+	always have the option of proceeding with transmission manually
+
+	by hitting the space bar, or terminating transmission by hitting
+
+	Alt-T.
+
+
+	You can store pacing instructions as one of the parameters in the
+
+	Dialing Directory (described below).
+
+
+	**Technical Note:
+
+	The Pacing option will automatically strip line feed characters
+
+	(ASCII 10) during transmission.  It will also add a space
+
+	preceding each carriage return (ASCII 13).  In other words, each
+
+	carriage return/line feed sequence (ASCII 13/10) in the file will
+
+	be transmitted as a space/carriage return (ASCII 32/13).  The
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 23
+
+
+	Pacing routine will then either pause for the specified time
+
+	delay, or wait for the specified prompt before sending the next
+
+	line.
+
+
+	If for some reason you want to strip line feeds and pad carriage
+
+	returns with spaces during transmission, but don't want to pause
+
+	with either a time delay or to wait for a prompt, just add '=p'
+
+	to the file spec.  The Pacing routine will proceed without
+
+	stopping. (Please note that if you specify '=p0' as the pacing
+
+	option, the program will wait for a '0' (zero) from the remote
+
+	computer before proceeding with the next line.)
+
+
+	The pacing option is a powerful feature that greatly extends the
+
+	versatility of PC-TALK in communicating with a variety of remote
+
+	computer systems.  However, it is not recommended that you try to
+
+	use transmit pacing unless you know of a specific need for it.
+
+
+	One common application in which transmit pacing is useful is
+
+	transmitting files to the Source using Telenet or Tymnet.
+
+	Depending on how heavily the system is being used, you may find
+
+	it necessary to pace transmission with a 2- or 3-second delay
+
+	between lines to make sure that your file is properly received by
+
+	the remote system.
+
+		    ----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 24
+
+
+
+
+
+	XMODEM Transmitting and Receiving: '=x'
+
+
+	One of the noteworthy features in PC-TALK III is the inclusion of
+
+	the XMODEM protocol originally developed by Ward Christensen.
+
+	The purpose of the XMODEM protocol is to guard against
+
+	inaccuracies in file transfer caused by bad signals on the
+
+	telephone line. It is a "hand-shaking" and error-checking
+
+	protocol that ensures accurate transmission and receipt of data
+
+	and binary files.  The protocol is in wide use today among a
+
+	variety of microcomputer systems.
+
+
+	The XMODEM protocol can be used for both transmitting and
+
+	receiving files.  In each case, you should add '=x' to your file
+
+	specifications; for example, 'MYFILE.123=x'.
+
+
+	Once you have entered the file spec and pressed <Enter>, you will
+
+	see a message indicating that the protocol is in effect and the
+
+	notice, "*** Holding for Start..."  The rest of the file transfer
+
+	occurs automatically.
+
+
+	If you are transmitting, line 25 of the screen will indicate how
+
+	many blocks (of 128 bytes) comprise the file.  You will see a
+
+	message "Sending block # n", followed by the message "- verified"
+
+	when the remote computer has successfully received that block.
+
+	The file transfer will proceed, block by block, until the end of
+
+	the file is reached.  The transfer will then terminate
+
+	automatically.
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 25
+
+
+	If you are receiving, you will see the same "*** Holding for
+
+	Start..." notice, followed by messages "Received block # n -
+
+	verified" as each block is received.  You will not see any
+
+	indication of how long the file is, but the receiving routine
+
+	will terminate automatically.
+
+
+	If the program detects an error while transferring the file, you
+
+	will see either a message "**Re-sending block..." in transmit
+
+	mode, or a variety of error messages in receive mode.  In either
+
+	case, the program will attempt to recover, indicate when the
+
+	transmission/receipt is verified, and continue with the transfer.
+
+
+	In some cases, the program will not be able to recover,
+
+	particularly if the line signal is degraded.  The transfer will
+
+	automatically terminate after repeated errors.	You can also
+
+	terminate manually at any time by pressing Alt-R or Alt-T.
+
+
+	If the XMODEM transfer does not succeed, please do not assume
+
+	that there is something wrong with your computer or with PC-TALK.
+
+	It is suggested that you hang up, re-establish communications
+
+	over a new line, and try again.
+
+
+	To operate with the XMODEM protocol, you must be communicating at
+
+	8 data bits, No parity (Communications Parameter options 2 or 4
+
+	-- see below). Both computers must have communications software
+
+	capable of running the XMODEM protocol.
+
+
+	The XMODEM routine in PC-TALK III  has been tested with other
+
+	implementations of the protocol and should give you good results.
+
+	If the other computer is running PC-TALK III, you can be
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 26
+
+
+	reasonably assured of a rapid and accurate file transfer.
+
+
+	The XMODEM routine operates automatically.  For those who are
+
+	interested, a brief technical description of how the file
+
+	transfer takes place can be found in Appendix B at the end of
+
+	this documentation.
+
+
+	Before leaving the subject of XMODEM, it is appropriate that
+
+	acknowledgment be given to Ward Christensen, who originated the
+
+	protocol and who has been a landmark pioneer in computer
+
+	communications.
+
+		    ----------------------------------------
+
+
+
+	A Note on Communications Terminology --
+
+
+	The PC-TALK prompts and documentation generally avoid use of the
+
+	words 'uploading' and 'downloading'. A convention in the
+
+	mainframe world has been to use 'uploading' to refer to
+
+	transmitting a file to a remote computer and 'downloading' to
+
+	refer to receiving a file from a remote computer.  In the case of
+
+	two microcomputers communicating with each other, the notion of
+
+	'up' and 'down' seems less appropriate.
+
+
+	For those who feel more comfortable with the mainframe terms, PC-
+
+	TALK offers the option of using the PgDn key (in addition to Alt-
+
+	R) to start and stop Receiving a file and the PgUp key (in
+
+	addition to Alt-T) to start and stop Transmitting a file.
+
+		     ---------------------------------------
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 27
+
+
+
+
+
+
+			   === More File Commands ===
+
+
+
+	Status Messages: Alt-M
+
+
+	The Message option (invoked with Alt-M) will send messages to the
+
+	remote computer when receiving and transmitting files.
+
+
+	When receiving a file with the Message option in effect, the
+
+	message "===READY TO RECEIVE===" will be sent to the remote
+
+	computer as soon as the receiving routine is in operation and
+
+	"===FILE RECEIVED===" when the receiving routine is terminated.
+
+
+	During transmission, the messages are "0 '===START OF FILE==="
+
+	and "65529 '===END OF FILE===" or, if the file was terminated
+
+	prematurely, "===TRANSMISSION OF FILE TERMINATED===". These
+
+	messages will appear on the remote computer's terminal, signalled
+
+	with a "bell" or "beep".
+
+
+	**Applications and Advanced Features:
+
+	The best use of the Message function is for the receiving
+
+	computer to have Messages ON and the transmitting computer to
+
+	have Messages OFF.  That way, the transmitting computer knows
+
+	when the receiving computer is ready to receive the file.
+
+
+	The numbers in the Transmit messages do make it possible to have
+
+	the Message function active when transmitting a BASIC file in
+
+	ASCII format.  The messages then become remarks in the
+
+	transmitted program.
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 28
+
+
+
+	The Message function should not be used when transmitting or
+
+	receiving files to or from a network or mainframe system.
+
+
+	The Receive and Transmit file specification prompts are always
+
+	displayed on your screen, regardless of whether the Message
+
+	option is in effect. These local messages are not transmitted and
+
+	do not interrupt communications.
+
+		  ---------------------------------------------
+
+
+
+	Viewing a File: Alt-V
+
+
+	PC-TALK permits you to view any file which is on your disk drives
+
+	while the program is running. This feature makes it possible for
+
+	you to refer to files on disk while communications are in progress.
+
+
+	To View a file, press Alt-V. The program will ask for file
+
+	specifications in the same manner as the procedures for
+
+	transmitting and receiving files.
+
+
+	Once Viewing is in progress, twenty lines of the file will be
+
+	displayed on the screen at a time.  To see more of the file,
+
+	press the space bar.  To cancel the Viewing routine, press Alt-V
+
+	again.
+
+
+	The text of the file you see displayed on your screen will not be
+
+	sent to the remote computer.
+
+
+	**Applications and Advanced Features:
+
+	If the remote computer sends you information while you are
+
+	viewing a file, that information will be stored in the
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 29
+
+
+	communications buffer.	A continuous stream of information from
+
+	the remote computer could overflow the buffer.	You should
+
+	therefore view a file only during a pause in communications.
+
+
+	You can print the contents of the file as you are viewing it
+
+	by turning on the Printout function (Ctrl-PrtSc) before giving
+
+	the Alt-V command. You can also print selective portions of the
+
+	file by using the Printscreen function (Shift-PrtSc).
+
+		  ---------------------------------------------
+
+
+
+	Deleting a File: Alt-Y
+
+
+	You can delete any file from your disk(s) while communications
+
+	are in progress. Press Alt-Y and follow the file specification
+
+	prompts. You will be shown the first five lines of the file and
+
+	then asked whether you are sure that you want to delete the file.
+
+	If you respond 'y' to the prompt, the file will be permanently
+
+	deleted from your disk. Be careful!
+
+		    ----------------------------------------
+
+
+
+	The Logged Drive: Alt-L
+
+
+	For the Transmit, Receive, View, and Delete routines, the program
+
+	assumes a default "Logged" drive if no drive is given as part of
+
+	the file specification prompts.  Initially, this is drive B.
+
+
+		 For example, if drive B is the Logged drive and you
+
+		 respond to a file specification prompt with just
+
+		 'MYFILE', the program will automatically look for a file
+
+		 'B:MYFILE'. If you want to transmit, receive, or view a
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 30
+
+
+
+		 file on drive A, you should respond to the file
+
+		 specification prompt with 'A:MYFILE'.
+
+
+	To change the Logged drive during program operation, press Alt-L
+
+	and follow the instructions.  The Logged drive can also be
+
+	changed as part of the Default modification routine (described
+
+	below).
+
+		    ----------------------------------------
+
+
+
+	File Specification Conventions --
+
+
+	PC-TALK III uses a standard set of commands for responding to
+
+	file specification prompts in the Receive, Transmit, View, and
+
+	Delete routines.
+
+
+	If you do not include a drive indicator as part of the
+
+	specification  (e.g., 'MYFILE.123'), the program will assume that
+
+	the file is to be located on the Logged drive (see above).
+
+
+	If you would like to see a list of the files presently on the
+
+	Logged drive, you can type a question mark in place of the file
+
+	spec.  You will be shown a listing of the files on the Logged
+
+	drive.	To see the files on another drive, type a question mark
+
+	followed by the letter designation of the drive.
+
+
+		 For example, if drive B is the Logged drive and you
+
+		 respond to a file spec prompt with '?', you will be
+
+		 shown a list of the files on drive B.	If you respond
+
+		 with '?a', you will be shown a list of the files on
+
+		 drive A.
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 31
+
+
+
+
+	You can also use the 'wild card' characters '*' and '?' as part
+
+	of these file listing requests.
+
+
+		 For example, if you respond to the file spec prompt with
+
+		 '? a:*.bas', you will be shown a list of all the files
+
+		 on drive A with the extension '.bas'.
+
+
+	If you decide you do not want to continue with the Receive,
+
+	Transmit, View, or Delete routines once you have made your
+
+	initial request with  Alt-R, -T, -V, or -Y, press <Enter> at the
+
+	file spec prompt and the routine will be cancelled.
+
+
+	If the Receive, Transmit, or View routines are invoked more than
+
+	once during a communications session, you can hit the space bar
+
+	in response to the file spec prompt, and the name of the last
+
+	file specified for receiving, transmitting, or viewing will
+
+	appear.  You can then either press <Enter> and continue
+
+	receiving, transmitting or viewing that file, or modify that file
+
+	spec before pressing <Enter>.
+
+		  ---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 32
+
+
+
+
+
+
+				 === Dialing ===
+
+
+
+	The Dialing Directory: Alt-D
+
+
+	The Alt-D command calls up the Dialing Directory, which is one of
+
+	PC-TALK'S  most useful features.  The Directory can list up to
+
+	sixty names and phone numbers, plus communications parameters and
+
+	echo, message, stripping and pacing instructions for each entry.
+
+
+	The following instructions will first show you how to place names
+
+	and phone numbers into the Directory and then describe how to use
+
+	the Directory as part of your standard communications routines.
+
+
+	When the Directory is called up for the first time, all entries
+
+	will be blank. To add names and phone numbers to the Directory or
+
+	to revise the Directory later on, enter 'r' at the "Dial entry
+
+	#:" prompt. (It doesn't matter whether you use lower or upper
+
+	case.) Then enter the entry number you want to add or revise.
+
+
+	To add/revise entries, type in the name, followed by <Enter>, and
+
+	the phone number (area codes optional), followed by <Enter>. Up
+
+	to 36 characters may be specified for the phone number; only the
+
+	rightmost 14 characters will be displayed in the Directory.
+
+
+	You will then be asked whether the communications parameters are
+
+	"ok". If 300 baud-even parity-seven data bits-one stop bit is
+
+	acceptable (this is the most common protocol), type 'y' <Enter>.
+
+	If you respond with 'n', you will be asked to specify
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 33
+
+
+	communications parameters. The program will not let you dial
+
+	using invalid parameters. (If you run into trouble, re-specify
+
+	'300-E-7-1'.)
+
+
+	The revise entry routine will then ask whether you want to echo
+
+	characters to the screen (common for inter-personal computer
+
+	communications, but usually not necessary for public networks
+
+	such as CompuServe and the Source), and whether you want to send
+
+	status messages as part of the file Receiving and Transmitting
+
+	routines (see above). Press <Enter> after responding to each
+
+	prompt.
+
+
+	The routine will then ask whether you want to strip or convert
+
+	characters for that entry.  It is recommended that you respond
+
+	with 'n' unless you have a special applications need. (See the
+
+	explanation of the Stripping option below.)
+
+
+	Finally, the routine will ask whether you want to specify a
+
+	Pacing instruction for that entry.
+
+
+	If you want to specify a Pacing instruction, enter either a time
+
+	delay number or a pacing prompt character in response to the
+
+	"Pacing? p=" prompt. Respond with 'n' <Enter> if you do not want
+
+	any pacing in effect for that entry. It is recommended that you
+
+	do not specify a Pacing instruction unless you know of a specific
+
+	need for it.
+
+
+	If you make an error specifying a directory entry, type 'n'
+
+	<Enter> at the final "ok?".  You will be taken through the
+
+	specification routine again.  For each parameter, you can either
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 34
+
+
+	specify a new value or press <Enter> to leave the present value
+
+	unchanged.
+
+
+	After you have responded with 'y' to the final "ok?" prompt, the
+
+	Directory will clear, showing the new information you input. The
+
+	name, phone number, and communications specs will be permanently
+
+	stored in a separate file on your program disk named PC-TALK.DIR.
+
+		    ----------------------------------------
+
+
+	Adding to the Directory --
+
+
+	As indicated above, specifying communications parameters, echo,
+
+	message, stripping, and pacing can all be considered advanced
+
+	features that need not be dealt with the first time you use the
+
+	program.  The following example lists the commands for merely
+
+	adding a name and phone number to the Directory.
+
+
+	1. Press Alt-D.  You will see Page 1 of the Directory displayed
+	and the prompt "Dial entry #:".
+
+
+	2. Type 'r' <Enter>. You will see the prompt "Revise/add entry #:".
+
+
+	3. Type '1' <Enter>. You will see the prompt "Name:".
+
+
+	4. Type the name you want for entry #1 (maximum 20 characters)
+	followed by <Enter>. You will see the prompt "Phone number:".
+
+
+	5. Type the phone number you want for entry #1 (maximum 36
+	characters) followed by <Enter>. You will see the prompt
+	"Communications parameters ok (y/n)?".
+
+
+	6. For this example, the parameters are ok, so type 'y' <Enter>,
+	or just press <Enter>.	You will see the prompt "Echo on (y/n)?".
+
+
+	7. Type 'n' <Enter> or just press <Enter>. You will see the
+	prompt "Messages on (y/n)?".
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 35
+
+
+
+
+	8. Type 'n' <Enter> or just press <Enter>. You will see the
+	prompt "Strip/convert characters (y/n)?".
+
+
+	9. Type 'n' <Enter> or just press <Enter>. You will see the
+	prompt "Pacing? p=".
+
+
+	10. Type 'n' <Enter> or just press <Enter>. You will see the
+	prompt "Is entry #1 ok (y/n)?".
+
+
+	11. Type 'y' <Enter> or just press <Enter>. You will see Page 1
+	of the Directory re-displayed with the name and phone number you
+	just entered.
+
+
+	12. Repeat the above steps for each name and phone number you
+	want to add to the Directory.
+
+		    ----------------------------------------
+
+
+
+	Other Directory Options --
+
+
+	Although the Directory has a capacity of sixty entries, the
+
+	screen will display only fifteen entries at a time.  You can
+
+	"page" forward or back through the directory by entering 'f' or
+
+	'b' at the initial "Dial entry #:" prompt.
+
+
+	You can dial any entry, regardless of whether it is displayed.
+
+	However, you can revise only those entries that are on the
+
+	displayed page of the Directory.
+
+
+	If you enter 'c' at the "Dial entry #:" prompt, you have the
+
+	option of clearing Directory entry #s within the range 1-60.  You
+
+	will be asked "Are you sure?" before your selected entries are cleared.
+
+
+		    ----------------------------------------
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 36
+
+
+
+
+	Auto-dialing --
+
+
+	The Dialing Directory will automatically dial a Directory entry
+
+	if your modem supports this function.
+
+
+	The first time the Directory is called up, you will see a notice
+
+	that says "modem dialing command = ATDT". This is the command
+
+	used by the D.C. Hayes Smartmodems<tm> for using touch tone dialing.
+
+
+	To specify a different dialing command--such as for pulse dialing
+
+	or for another auto-dial modem--enter 'r' to revise the
+
+	Directory and then type 'm' <Enter> at the "Revise/add entry #:"
+
+	prompt. Then type your desired dialing command, followed by
+
+	<Enter>.  (The Smartmodem command for pulse dialing would be
+
+	'ATDP'.)
+
+
+	Whatever modem dialing command you specify will be permanently
+
+	stored in the Directory file (until revised again).
+
+
+	Once the appropriate dialing command has been entered in the
+
+	Directory, you can have the program dial phone numbers
+
+	automatically. Simply type the Directory entry # you wish to
+
+	call, followed by <Enter>. The phone number listed for that entry
+
+	will then be dialed.
+
+		    ----------------------------------------
+
+
+	Long Distance Services:  '+#' and '-#'
+
+
+	The Dialing Directory is also able to route calls through
+
+	supplemental long distance services such as Sprint<tm> and
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 37
+
+
+	MCI<tm>. Two different service numbers can be stored in the
+
+	Directory, which are listed in the Directory as '+#' and '-#'.
+
+
+	To add a long distance service number to the Directory, type 'r'
+
+	<Enter> at the "Dial entry #:" prompt.  Then type '+' or '-' plus
+
+	<Enter> at the "Revise/add entry #:" prompt.  You can then
+
+	specify a long distance number command.
+
+
+	When entering the long distance number, include both your local
+
+	access number and your i.d. number. Separate the two numbers with
+
+	your modem's "pause" command indicators (commas on the
+
+	Smartmodem) so that your i.d. number will not be input until a
+
+	connection with the access number has been made. The long
+
+	distance service # might thus appear in the Dialing Directory as:
+
+	'987 6543,,,,123456'.
+
+
+	If your long distance service requires a different sequence --
+
+	such as inputting your account number following the number dialed
+
+	-- you can program a Function key combination for your account
+
+	number. See "The Function Key Directory" below.
+
+
+	Once a long distance service # has been entered into the
+
+	Directory, it will reside there permanently (until revised) and
+
+	display whenever the Directory is called up.
+
+
+	To dial a Directory entry # using the long distance service,
+
+	input a '+' or a '-' immediately preceding the desired entry #.
+
+
+		 For example, to dial Directory entry #3 using the
+
+		 service number listed as '+#', you would type '+3'
+
+		 <Enter> at the "Dial entry #:" prompt.
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 38
+
+
+
+	Manual Dialing: 'm'
+
+
+	You can also use auto-dialing to call phone numbers not stored in
+
+	the Dialing Directory. From the main Dialing Directory prompt,
+
+	type 'm' <Enter>. A prompt will then ask for the phone number to
+
+	be dialed. Type the phone number and press <Enter>, and the
+
+	number will be dialed automatically.
+
+
+	As in the Dialing Directory, preceding the phone number with '+'
+
+	or '-' will route the call through one of the supplemental long
+
+	distance service numbers (if they have been stored in the Directory.)
+
+		    ----------------------------------------
+
+
+	Redialing: Alt-Q
+
+
+	If you have a Hayes Smartmodem<tm>, the last phone number you
+
+	have dialed can be redialed at any time by pressing Alt-Q, which
+
+	calls into effect the Redial routine.
+
+
+	The routine will display the time the Redial routine was started
+
+	and redial the number approximately every minute until a
+
+	connection is made.
+
+
+	When a connection is made, the program will sound an alarm,
+
+	prompting you to hit any key to resume communications.	You can
+
+	exit from the auto-redial routine at any time before a connection
+
+	is made by hitting any key.
+
+
+	You can adapt the Redial routine for longer or shorter delays, or
+
+	for other modems with auto-dialing features, from within the
+
+	Default routine described below.
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 39
+
+
+
+
+
+	Stripping and Converting Characters --
+
+
+	PC-TALK III provides for optional selective stripping and/or
+
+	converting of characters as they are received during
+
+	communications.  This is an advanced feature.
+
+
+	The program default is not to strip any characters.  When you
+
+	call up the Dialing Directory with Alt-D, the "Strip" column will
+
+	show "N" for each entry, indicating that no stripping is to take
+
+	place.
+
+
+	To specify selective stripping as part of the stored parameter
+
+	for a Directory entry, revise the entry and respond with 'y' to
+
+	the prompt "Strip/convert characters?". You will then be prompted
+
+	to enter the "strip/convert string" for that entry.  This string
+
+	should be structured as follows:
+
+
+	Each character to be stripped or converted must be specified with
+
+	a three-digit representation of its decimal ASCII code, followed
+
+	by a slash (/), followed by a three-digit representation of the
+
+	decimal ASCII code to substitute for that character, followed by
+
+	another slash.
+
+
+		 For example, to convert the commonly used end-of-file
+
+		 character Ctrl-Z (ASCII 26) to a space (ASCII 32), the
+
+		 strip/convert string would be '026/032/'.  PLEASE NOTE
+
+		 THAT A ZERO SHOULD PRECEDE THE ASCII NUMBER IF IT IS
+
+		 LESS THAN 100.
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 40
+
+
+	If you simply want to strip out a character, rather than convert
+
+	it, enter three zeros as the second part of the string:
+
+	'026/000/'.
+
+
+	If you want to strip or convert more than one character, continue
+
+	with more string specifications.
+
+
+		 For example, to strip all ASCII 26's and ASCII 127's and
+
+		 convert each capital A (ASCII 65) to lowercase (ASCII
+
+		 97), the strip/convert string would be
+
+		 '026/000/127/000/065/097'.  Up to 3 characters can be
+
+		 specified for stripping/converting in this manner.
+
+
+	You will have opportunities to correct the newly-specified string
+
+	within the revise entry routine of the Dialing Directory.  (The
+
+	program pads the strip/convert string with extra slashes.) The
+
+	strip/convert string will be stored in the Dialing Directory.
+
+
+	When you dial a remote computer with the stripping option in
+
+	effect, the appropriate characters will be stripped and/or
+
+	converted during all incoming communications, including files
+
+	that you receive with the Receive routine.  You can not have
+
+	stripping in effect when you use the XMODEM error-checking
+
+	protocol (described above).
+
+
+	**Applications Notes:
+
+	Please note that it is not recommended that you strip or convert
+
+	characters unless you know of a specific application or need
+
+	related to the remote computer you are calling.
+
+
+	It is not necessary to specify stripping of line feeds for the
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 41
+
+
+
+	purpose of correcting the screen display, as PC-TALK does this
+
+	automatically. (Line feeds are not automatically stripped during
+
+	file receiving, however.)
+
+		    ----------------------------------------
+
+
+
+	Pacing Instructions --
+
+
+	As noted above, you can also store a Pacing instruction as part
+
+	of each Directory entry.  (Pacing is discussed above in
+
+	connection with transmitting files.)
+
+
+	If you have stored a Pacing instruction, the pacing suffix will
+
+	automatically be added to each transmit file specification.
+
+
+		 For example, if you had stored the pacing instruction
+
+		 'p=2' for the entry you have dialed, and specify a file
+
+		 to transmit simply as 'MYFILE'<Enter>, you will hear a
+
+		 beep and the file will be re-specified as 'MYFILE=p2'.
+
+		 If you press <Enter> at this point, the file will be
+
+		 transmitted with a 2-second pacing delay.
+
+
+		 Continuing with the above example, if you did not want
+
+		 to transmit using the Pacing option, you could backspace
+
+		 to eliminate the 'p=2' portion of the file spec, press
+
+		 <Enter>, and transmission would proceed without Pacing
+
+		 in effect.
+
+
+	Please note from the above examples that the Pacing instructions
+
+	stored in the Directory do not automatically transmit every file
+
+	using Pacing--they merely re-display the Transmit file specs to
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 42
+
+
+
+	include the Pacing instruction.
+
+
+	**Applications and Advanced Features:
+
+	Even if you do not have an auto-dialing modem, you can use the
+
+	Communications Parameter, Echo, Message, Stripping, and Pacing
+
+	specifications to customize the program for different
+
+	applications.  Store the name in the Directory and a 'dummy'
+
+	phone number such as '--' or '<space>'.  Store the rest of the
+
+	specifications.  Then "dial" the entry number.  Even though no
+
+	phone number will be dialed, the specifications will have been
+
+	put into effect.
+
+
+	You should also note that when you place a call through the
+
+	Dialing Directory, the Communications Parameters and the Echo,
+
+	Message, Stripping, and Pacing specifications will remain in
+
+	effect, even after the call is completed.  You might want to set
+
+	up Directory entry #60 as a 'dummy default' entry to reset
+
+	certain specifications.  You can also reset the program
+
+	parameters and defaults with the Parameter and Default routines
+
+	(Alt-P and Alt-F) described below.
+
+
+	**Applications Note: CompuServe and the Source
+
+	This version of PC-TALK requires that you place access numbers
+
+	for CompuServe and the Source as regular entries in the Dialing
+
+	Directory.  This enables you to specify various communications
+
+	parameters and stripping instructions when calling these
+
+	networks.  (You may want to place several CompuServe or Source
+
+	entries in your Directory to reflect different parameters, such
+
+	as 300-baud and 1200-baud entries.)
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 43
+
+
+
+
+	**Note that some of the Source utilities, such as UPI news, may
+
+	send an ASCII 26 to mark the ends of articles or messages.  If
+
+	you receive the files with these ASCII 26 characters, DOS will
+
+	later interpret them as end-of-file markers and you will not be
+
+	able to view the rest of the file, even though the information
+
+	might still be there.
+
+
+	If you encounter this problem, you may want to specify stripping
+
+	of ASCII 26's as part of your Source Dialing Directory entry, or
+
+	convert them to carriage returns (ASCII 13) or spaces (ASCII 32).
+
+	In such cases, your strip/convert string should be specified as
+
+	'026/000' (strip) or '026/013' (convert to carriage return) or
+
+	'026/032' (convert to space).
+
+
+	**Applications Note: Mainframe Hosts
+
+	Some mainframe systems send null characters at the ends of lines.
+
+	Normally, the IBM PC displays these as spaces.	These can corrupt
+
+	the appearance of the screen.  A solution is to specify stripping
+
+	of nulls in the Dialing Directory entry for that system.  The
+
+	appropriate strip/convert string is '000/000/'.  Even though this
+
+	looks like nulls are being converted to nulls (pretty strange),
+
+	this procedure will work.
+
+		  ----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 44
+
+
+
+
+
+
+			 === Parameters and Defaults ===
+
+
+
+	Communications Parameters: Alt-P
+
+
+	It is not necessary that you understand communications protocols
+
+	to use PC-TALK, but you might find it helpful to read the brief
+
+	explanation of communications parameters included as Appendix A
+
+	at the end of this documentation.
+
+
+	Pressing Alt-P at any time while the program is running will call
+
+	up a menu which allows you to set the communications parameters
+
+	to one of four options.
+
+
+	The most common parameters for personal computer communications
+
+	are 300 baud, even parity, 7 data bits, and 1 stop bit (option
+
+	1).  These parameters transmit text files as ASCII characters.
+
+
+	To transmit binary data, you should communicate with 8 data bits
+
+	(option 2). This option is also used to transmit "high-bit"
+
+	encoded files (such as Wordstar<tm> formatted text files).
+
+
+	Options 3 and 4 will transmit text and binary files at 1200 baud.
+
+
+	Option "F" of the Communications Parameters menu permits you to
+
+	reset the parameters to those specified as the program Defaults
+
+	(see below).
+
+
+	If you want to specify parameters other than one of the four
+
+	options, you should first press 'x' to exit to the terminal mode
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 45
+
+
+	and then invoke the Default routine by pressing Alt-F.
+
+
+	**Applications and Advanced Features:
+
+	If either you or the remote computer is receiving unintelligible
+
+	information on the screen, you are probably using different
+
+	communications parameters.  Sometimes you will be able to change
+
+	the parameters while communications are in progress, but it may
+
+	cause a break in communications, depending on the system you are
+
+	calling and the modems in use.
+
+
+	If you specify 8 data bits, (options 2 or 4), your modem might
+
+	not give intelligible result codes. Also, if you transmit text
+
+	files using option 2, as is required to transmit re-formattable
+
+	Wordstar<tm> files, your screen may display unintelligible
+
+	characters during transmission. The file is being transmitted
+
+	accurately, however.
+
+		  ---------------------------------------------
+
+
+
+	Program Defaults: Alt-F
+
+
+	The "defaults" of a program are those values that the program
+
+	assumes every time it is started.  PC-TALK makes a number of such
+
+	assumptions, which can be changed at any time while the program
+
+	is running by pressing Alt-F.
+
+
+	When you press Alt-F, the screen will clear and you will see a
+
+	list of the present program defaults.  They are as follows:
+
+
+		  Baud rate  300
+		  Parity     E
+		  Data bits  7
+		  Stop bits  1
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 46
+
+
+
+
+	These are the four communications parameters described
+
+	previously. The permissible baud rates are 75, 110, 150, 300,
+
+	600, 1200, 1800, 2400, 4800, and 9600. Parity may be E(ven),
+
+	O(dd), S(pace), M(ark), or N(one). Data bits may be 4, 5, 6, 7,
+
+	or 8. Stop bits may be 1 or 2.
+
+
+	Note: If you specify 8 data bits, you must specify N parity. Do
+
+	not experiment with any of these values unless you have a
+
+	specific application.
+
+
+		  Echo	    N
+		  Messages  N
+
+
+	The default is to have both the Echo and Message functions
+
+	inactive at program startup. To have either function be active,
+
+	enter 'Y'.
+
+
+	Note that both functions can be controlled by the Alt-E and Alt-M
+
+	keys, regardless of how the defaults are set.
+
+
+		  Strip #1    0
+		  Replace #1  0
+		  Strip #2    0
+		  Replace #2  0
+		  Strip #3    0
+		  Replace #3  0
+
+
+	These defaults provide the opportunity to strip and/or replace
+
+	characters as they are received from the remote computer.
+
+
+	The "Strip #" values represent the decimal ASCII values of the characters
+
+	to be stripped or converted and the corresponding "Replace #"
+
+	values indicate the ASCII characters to replace them.
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 47
+
+
+
+	A 0 (zero) Strip value indicates that no character is to be
+
+	stripped or converted. A 0 (zero) Replace value indicates that
+
+	the strip character is to be replaced by a null (no character).
+
+
+	The values listed in this menu are only the default values for
+
+	program startup.  Stripping can be put into effect via the
+
+	Dialing Directory, as described in detail above. Stripping is an
+
+	advanced feature that should not be used without a specific
+
+	application in mind.
+
+
+	     Pacing p=	''
+
+
+	This gives you the opportunity of specifying a default pacing
+
+	instruction, as explained previously.  This default is overridden
+
+	by whatever pacing instructions may be put into effect through
+
+	the Dialing Directory.	The symbol '' indicates a null entry.
+
+
+		  Logged drive	B:
+		  Margin Width	70
+
+
+	Both of these default values can be controlled by the Alt-L and
+
+	Alt-W commands described previously.
+
+
+	Please note that all of the above defaults can be controlled
+
+	independently through program commands.  The values listed in the
+
+	Default menu represent only the values the program assumes at
+
+	startup.
+
+
+	In contrast, the following defaults (those listed in the second
+
+	column of the Default menu) can be set only from within the
+
+	Default menu.
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 48
+
+
+
+		  Screendump file  B:SCRNDUMP.PCT
+
+
+	This is the specification of the file that is written to when
+
+	Alt-S is pressed to activate the Screendump function.
+
+
+		  Redial delay	  20
+		  Connect prompt  CONNECT
+
+
+	These defaults pertain to the Alt-Q Redial function.  The "Redial
+
+	delay" governs the length of time between re-dial attempts (in
+
+	seconds).  The "Connect prompt" specifies the message that the
+
+	modem sends to indicate that a connection has been made.
+
+
+	These defaults are set to redial every minute on the Hayes
+
+	Smartmodems<tm>.  They can be adapted to many other auto-dial
+
+	modems. (Consult your modem manual.)
+
+
+		  Line 25 help	Y
+
+
+	This default governs whether the brief prompt on line 25 of the
+
+	screen is displayed.  To turn off the prompt, enter 'N'.
+
+
+		  Foreground	7
+		  Background	0
+		  High inten.	15
+
+
+	These three values determine how characters are displayed on the
+
+	screen.  If you have a color monitor, you can substitute color
+
+	values as explained in the IBM BASIC manual.  Be careful that you
+
+	don't assign the same value to Foreground and Background!
+
+
+		  Print port   LPT1:
+		  Print init.  ''
+		  Print width  80
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 49
+
+
+
+	These three values govern the use of the printer.  You can
+
+	specify 'LPT2:' as an optional printer port, if that is where
+
+	your printer is connected.
+
+
+	The "Print init." default permits you to send characters to the
+
+	printer for alternate character fonts.	The "Print width"
+
+	specifies how many columns per line the printer will handle.
+
+
+		 For example, to print in condensed type at 132 columns
+
+		 per line on the IBM Matrix Printer, enter <Ctrl>-O (oh)
+
+		 as the Print init. value and '132' as the Print width.
+
+
+		  Comm. port   COM1:
+		  Comm. init.  ,CS,DS
+
+
+	The first of these defaults permits you to specify 'COM2:' as the
+
+	communications port.
+
+
+	The second default disables checking of the "Clear to Send" and
+
+	"Data Set Ready" signals when the communications port is opened.
+
+	This default should not be changed unless you have a specific
+
+	application. Consult the IBM BASIC Manual under the OPEN "COM...
+
+	statement for details.
+
+
+		  Modem init.  ''
+
+
+	This provides the option of sending an initializing command to
+
+	your modem. The '' symbol indicates a null entry.
+
+
+		  C/R subst.  }
+
+
+	This final default specifies which character is to be used to
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 50
+
+
+	indicate carriage returns when defining Function key and Alt key
+
+	input strings (see below).  This character may be changed at will
+
+	without altering the actual input string.
+
+
+	The procedure for entering new default values is simple.  When
+
+	you first call up the Default menu, the cursor will be paused
+
+	next to the default for the baud rate. You can enter new values
+
+	for all the defaults or leave them unchanged as follows:
+
+
+	-- If you want to enter a value, type the new value and then
+
+	   press <Enter>.
+
+	-- If you want to leave the value unchanged, simply press <Enter>.
+
+	-- If you want to enter a null (blank) value, type <space> <Enter>.
+
+
+	When you do not want to change any more values, type <Esc> <Enter>.
+
+	(Pressing the <Esc> key will display a small left arrow on the
+
+	screen.)
+
+
+	You will then be asked whether the new values you entered are ok.
+
+	If you do not respond with 'y', you will exit the Default routine
+
+	and all of the old defaults will remain in effect.
+
+
+	If you indicate that the new values are ok, you will be asked
+
+	whether you want to make the changed default values permanent.
+
+	If you respond 'y', your changes will be written to a file called
+
+	PC-TALK.DEF.  The new values will be put into effect, and they
+
+	will become the new default program values the next time PC-TALK
+
+	is run.
+
+
+	If you do not want to make the changes permanent, your new values
+
+	will be put into effect, but the old values will remain as the
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 51
+
+
+
+	defaults the next time PC-TALK is run.
+
+
+	**Applications and Advanced Features:
+
+	The Default routine provides you with a great degree of control
+
+	over your use of the program.  The program will do some checking
+
+	for invalid default values, but you should be careful when
+
+	changing the defaults and do so only if you know of a specific
+
+	need.
+
+
+	If you run into trouble specifying the defaults, you can exit to
+
+	DOS and simply delete the file PC-TALK.DEF from your program
+
+	disk.  PC-TALK will create a new default file if it does not
+
+	locate the PC-TALK.DEF file.
+
+
+		  ---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 52
+
+
+
+
+
+
+			      === Input Strings ===
+
+
+
+	The Function Key Directory: Alt-K (or Alt-J)
+
+
+	One of PC-TALK's other powerful features is the Function Key
+
+	Directory, which is called up by pressing Alt-K.  (To accommodate
+
+	users of the KEYNOTE program, you can also call up the Function
+
+	Key Directory with Alt-J.)
+
+
+	The Function Key Directory permits you to assign permanent
+
+	strings of up to 126 characters to the ten Function keys F1
+
+	through F10, and to the combinations of Alt-, Shift-, and Ctrl-
+
+	F1 through F10.  A total of forty keys can thus be assigned
+
+	permanent strings, which can be used to input i.d. numbers, logon
+
+	sequences, frequently-used phrases and other text with a single
+
+	keystroke.
+
+
+	The information in the Function Key Directory is stored in a file
+
+	called PC-TALK.KEY and is loaded every time PC-TALK is run.
+
+
+	The first time the Function Key Directory is called up, you will
+
+	see that the keys F1 through F10 have no strings assigned to
+
+	them.  To program a key (or to revise a previously programmed
+
+	key), press 'r' at the first prompt.  You will then be asked to
+
+	specify which Function key (1 through 10) you wish to revise.
+
+	Type the appropriate number and hit <Enter>.
+
+
+	You will then be prompted to enter the string you want to assign
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 53
+
+
+	to that Function key.  Type the desired characters, followed by
+
+	<Enter>.  The directory will display the revised input for that
+
+	key.  (If you make an error, press 'r' again and respecify for
+
+	that key.)
+
+
+	If you want to specify carriage returns as part of the input
+
+	string, input a "right curly bracket" -- the shifted key '}' just
+
+	to left of the <Enter> key -- at that point in the input string.
+
+	If you want the input string to terminate with a carriage return,
+
+	enter '}' as the last character of the string.
+
+
+		 For example, if you wanted to assign the string 'ABC
+
+		 <Enter> 123 <Enter>' to Function key F1, you would enter
+
+		 the input string as 'ABC}123}'.
+
+
+	The input string may be up to 126 characters in length; only the
+
+	leftmost 30 characters will be displayed in the directory.
+
+
+	You can "page" forward or back through the Function Key Directory
+
+	by pressing 'f' or 'b' at the initial prompt.  This will permit
+
+	you to assign or revise strings for the key combinations Alt-F1
+
+	through Alt-F10, Shift-F1 through Shift-F10, and Ctrl-F1 through
+
+	Ctrl-F10.
+
+
+
+	Using the Function Key Assignments --
+
+
+	Once any of these forty Function keys or key combinations have
+
+	been assigned, hitting that key will send the input string
+
+	directly to the communications port (sending carriage returns in
+
+	place of '}').
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 54
+
+
+
+	Continuing with the example above, if you pressed F1 during
+
+	communications, you would send the following to the remote
+
+	computer:
+				  ABC
+				  123
+
+
+
+	You can specify a new string for any of the Function keys at any
+
+	time.  If you want to clear the key, type <space> <Enter> as the
+
+	new input string.
+
+
+	The Alt-K command can be used simply to display the Function Key
+
+	Directory for reference.  You can page through the Directory as
+
+	needed to confirm your key assignments.  To continue with
+
+	communications, press 'x' at the initial prompt and you will
+
+	be returned to the regular terminal mode of the program.  You
+
+	can then proceed by pressing any of the Function keys to send
+
+	an assigned string or proceed by typing information from the
+
+	keyboard.
+
+
+	IMPORTANT! DO NOT PLACE CONFIDENTIAL ID NUMBERS OR PASSWORDS IN
+
+	THE FUNCTION KEY DIRECTORY IF OTHERS WILL HAVE ACCESS TO YOUR
+
+	PROGRAM DISK. When you want to make a copy of PC-TALK for others,
+
+	do not copy the file PC-TALK.KEY, as this file may contain
+
+	confidential information.
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 54a
+
+
+	**Applications and Advanced Features:
+
+	You can also use the Function keys to store filespecs.	Pressing
+
+	the appropriate key will input the filespec in response to a
+
+	Receive, Transmit, or View file prompt.
+
+
+	You can include control characters (ASCII 0 through 31) as part
+
+	of the input string.  The program will display these characters
+
+	as their highlighted letter equivalents (e.g., an ASCII 12 will
+
+	be displayed as a highlighted letter 'L').
+
+
+	You can change the character used as the carriage return
+
+	substitute from the right curly bracket to any other character
+
+	from within the Default specification routine.	This carriage
+
+	return substitute only affects how the string is specified and
+
+	how it is displayed on the screen; the program always stores a
+
+	"real" carriage return (ASCII 13).  Thus, you can switch back and
+
+	forth using different characters as the substitute.
+
+
+	A new user of the program does not need to have the PC-TALK.KEY
+
+	file on his/her disk. If the program does not locate PC-TALK.KEY
+
+	on the program disk, it will initialize and create a new blank
+
+	Function key file. The same is true for the file PC-TALK.DIR,
+
+	which contains the information used by the Dialing Directory.
+
+		  ---------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 55
+
+
+	Hanging Up the Modem
+
+
+        A common use of the Function keys is to store commands for
+
+        hanging up your modem.
+
+
+        For example, the Hayes Smartmodems(tm) require two commands to 
+
+        hang up.  First, the modem must be sent three plus characters 
+
+        to get the modem's attention.  Then the modem must be sent the 
+
+        command ATH to get it to hang up.  You can set up PC-TALK to 
+
+        store these commands on function keys as follows:
+
+
+        Assign "+++" to function key F7.
+
+        Assign "ATH}" to function key F8.
+
+
+        (In this example, include the characters between the double 
+
+        quotes in the key assignments, but not the double quotes 
+
+        themselves.  The } character represents a carriage return.)
+
+
+        Now when you want to hang up the modem, simply press F7, 
+
+        wait for the modem to signal "OK" and then press F8.
+
+		  ---------------------------------------------
+
+
+        Temporary Alt Keys: Alt-1 through Alt-0
+
+
+	In addition to the permanent Function key combinations described
+
+	above, the ten key combinations Alt-1 through Alt-0 can be
+
+	programmed for temporary custom input while communications are in
+
+	progress.
+
+
+	Pressing Alt-'=' (Alt-equals) at any time during communications
+
+	will display a prompt on line 25 of the screen, asking for the
+
+	key to be programmed.  Type any of the numbers 1 through 0.
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 56
+
+
+
+	You will then be prompted to enter the temporary string for that
+
+	Alt key. All keystrokes entered subsequently will input text for
+
+	that key, until you press <Enter> (maximum 50 characters).
+
+
+	As with the Function key assignments described above, you can use
+
+	a right curly bracket '}' to include a carriage return as part of
+
+	the temporary string. Control characters will be displayed as
+
+	their highlighted letter equivalents.
+
+
+	When a temporary Alt key has been assigned, the program will
+
+	display the first seven characters of the programmed input on
+
+	line 25 of the screen and return to normal keyboard operation.
+
+
+	Once an Alt key 1 through 0 has been assigned, pressing it will
+
+	send the assigned string, just as though it had been typed from
+
+	the keyboard.  The Alt keys can also be used to input filespecs.
+
+
+	You can change an Alt key assignment at any time by pressing Alt-
+
+	equals, followed by the number of the key to be respecified and
+
+	the new assignment.
+
+
+	If you want to clear a key, press Alt-equals, the number of the
+
+	key, and then type <space> <Enter>.  If no Alt-key assignments
+
+	are in effect, the display on line 25 will disappear.
+
+
+	**NOTE the difference between these Alt key assignments and the
+
+	Function key assignments described above:
+
+
+	The Alt keys can be easily reprogrammed during communications and
+
+	are displayed on line 25 of the screen.  This makes them con-
+
+	venient for holding temporary input strings needed for quick
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 57
+
+
+
+	reference.  However, the Alt-key assignments are not saved when
+
+	the program is terminated.
+
+
+	The Function key assignments, on the other hand, are stored
+
+	permanently on disk and reloaded each time PC-TALK is run.  This
+
+	makes them convenient for storing id numbers and logon sequences.
+
+	However, you cannot continue with communications while you are
+
+	reassigning the Function keys.
+
+		  ---------------------------------------------
+
+
+	**Applications Note: Hanging Up
+
+	In order to remain compatible with as many modems as possible,
+
+	PC-TALK does not have a pre-programmed command for hanging up
+
+	the phone line.  Many modems do provide such a command, however.
+
+	For example, the Hayes Smatrmodems<tm> require that three plus
+
+	characters ('+++') be sent to put the modem into command state.
+
+	At that point, the command 'ATH' (all capital letters) plus a
+
+	carriage return will hang up the line.
+
+
+	These commands can be assigned to permanent input keys in PC-TALK.
+
+	For example, the string '+++' could be assigned to key F9 and the
+
+	string 'ATH}' to key F10.  (You cannot assign both strings to a
+
+	single key because the Hayes Smartmodem<tm> requires a pause
+
+	between the two commands and this version of PC-TALK does not
+
+	provide for programmed pauses in input strings.
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 58
+
+
+
+
+
+
+		   === Miscellaneous Features and Commands ===
+
+
+
+	Elapsed Time: Alt-Z
+
+
+	At any time during program operation, you can display the elapsed
+
+	time for the current call by typing Alt-Z. For updated time, hit
+
+	Alt-Z again. (The elapsed time is reset whenever a new call is
+
+	made.)
+
+
+
+	Exit: Alt-X
+
+
+	Pressing Alt-X at any time will give you the option of
+
+	terminating the program and returning to DOS.
+
+
+
+	Sending a Break Signal: Ctrl-End
+
+
+	Various remote computer systems use different signals to effect a
+
+	break during communications.  For example, the break signal for
+
+	CompuServe is a Control-C; the Source Break signal is a Control-
+
+	P. Any key sequence (including all control key combinations) may
+
+	be sent via the keyboard.  Some break sequences may also be
+
+	programmed via the Function Key Directory.
+
+
+	Some systems require a special "sustained" Break signal. This
+
+	signal can be sent by hitting the Ctrl and the End keys
+
+	simultaneously.  You will have to experiment, or consult your
+
+	remote system's documentation to determine the correct Break
+
+	signal to use.
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 59
+
+
+
+
+	CAUTION: do not attempt to use the combination of the Ctrl key
+
+	and the ScrollLock/Break key as this may terminate PC-TALK.
+
+
+	Rubout: Del key
+
+
+	The 'rubout' or 'delete' character (ASCII 127) may be sent by
+
+	pressing the Del key.  In some cases this will display on your
+
+	screen as a small house-shaped character.
+
+
+
+	Command Summary: Home key
+
+
+	An on-screen summary of all the PC-TALK program commands
+
+	described above can be displayed at any time by hitting the Home
+
+	key.
+
+
+	Toggle Commands:
+
+
+	The following keys toggle on/off their respective functions and
+
+	operate at any time while the program is running:
+
+
+		      Alt-T  Transmit  Alt-E  Echo
+
+		      Alt-R Receive    Alt-M  Messages
+
+		      Alt-V  View      Ctrl-PtrSc Printout
+
+
+		    ----------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 60
+
+
+
+
+
+
+		 === More Applications and Advanced Features ===
+
+
+
+	Even though this section is described as "advanced," the
+
+	following information should be of interest to all users of the
+
+	program.
+
+
+
+	XON/XOFF: Alt-O
+
+
+	PC-TALK supports the sending of XON/XOFF signals to the remote
+
+	computer in the event of a communications buffer overflow (see
+
+	below), and will trap for XON/XOFF signals sent by the remote
+
+	computer during transmission of files. The default XON signal is
+
+	ASCII 17; the default XOFF signal is ASCII 19.
+
+
+	If the remote computer sends an XOFF signal during transmission
+
+	of a file, the symbol "<<XOFF>>" will be displayed highlighted on
+
+	the screen until the remote computer sends an "XON" signal, at
+
+	which time transmission will resume automatically.  If transmis-
+
+	sion has been halted, it may be resumed manually by typing Alt-O
+
+	(the letter 'oh') at the keyboard.
+
+
+
+	Communications Errors: <<>> and <<OVERFLOW>>
+
+
+	PC-TALK will indicate certain types of errors if they occur
+
+	during communications.	If there is an ambient signal on the
+
+	line, the program will display the symbol '<<>>' in high
+
+	intensity.  Communications will not be interrupted in most cases,
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 61
+
+
+	but this symbol should put you on notice that you are sending or
+
+	receiving corrupted data.  On a very noisy line, you may see the
+
+	symbol repeatedly.  You should disconnect and try for a better
+
+	connection.
+
+
+	With some modems, including the Hayes Smartmodems<tm>, you may
+
+	see the <<>> symbol when communications are first opened.  This
+
+	should not be a cause for concern, provided you do not see the
+
+	symbol once communications are in progress.
+
+
+	PC-TALK opens a communications buffer for receiving data through
+
+	the communications port.  In most cases, the program should be
+
+	able to process data as fast as it is received.  If the
+
+	communications buffer does fill faster than the program can
+
+	handle the incoming data, you will see the symbol <<OVERFLOW>> on
+
+	the screen.  The program will then try to recover, by sending an
+
+	XOFF signal to the remote computer, processing the contents of
+
+	the buffer, and then sending an XON signal.
+
+
+	Two situations should be noted which may cause an overflow
+
+	condition.  If you are running the uncompiled BASIC version of
+
+	the program at 1200 baud, you may experience an overflow
+
+	condition if you are making use of the character stripping
+
+	options, or if the remote computer does not support XON/XOFF.
+
+
+	If you are trying to perform simultaneous printout at 1200 baud,
+
+	your printer will probably not be able to keep up and eventually
+
+	the buffer will overflow, even with the .EXE version of the
+
+	program.  PC-TALK will attempt to recover by turning off the
+
+	print feature.
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 62
+
+
+
+
+
+
+		      === PC-TALK III File Information ===
+
+
+
+	PC-TALK III is supplied with the following files:
+
+
+	PC-TALK.BAS -- The BASIC source code for the program.  It will
+
+	run on a 64K system using DOS 1.00 or 1.10 and BASIC 1.10.
+
+
+	PC-TALK.EXE -- The compiled BASIC version of the program.  It
+
+	will run under DOS 1.00, 1.10, or DOS 2.00 on a system with 128K
+
+	or more of memory.
+
+
+	PC-TALK.DOC -- The text file containing this documentation.
+
+
+	TALK64.BAT  -- A batch file that runs the 64K version. The file
+
+	contains the single command 'BASIC PC-TALK/C:1024'.  This
+
+	sets up a 1024-byte communications buffer.
+
+
+	TALK128.BAT -- A batch file that runs the 128K version.  It
+
+	contains the single command 'PC-TALK'. The .EXE version can, of
+
+	course, be run directly from DOS with the command 'PC-TALK'
+
+	<Enter>.
+
+
+	PRINTDOC.BAT -- A batch file with a series of prompts to print
+
+	the documentation file from DOS.
+
+
+	COPYTALK.BAT -- A batch file to aid in making copies of PC-TALK
+
+	for other users.  It will not copy your personal .DIR, .KEY, and .DEF
+
+	support files.
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 63
+
+
+	The first time PC-TALK III is run, the program looks for three support
+
+	files.	If it does not find them, these three files will be created on
+
+	the program disk:
+
+
+	PC-TALK.DIR -- The file that stores Dialing Directory information.
+
+	PC-TALK.KEY -- The file that stores Function Key information.
+
+	PC-TALK.DEF -- The file that stores Default Menu information.
+
+		    ----------------------------------------
+
+
+
+	Programming Information --
+
+
+	One additional file is supplied on the program disk: PCTKREM.MRG.
+
+	This is a BASIC file saved in ASCII format that contains REMark
+
+	statements.  It can be MERGED into PC-TALK.BAS to improve the
+
+	readability of the program.  However, once merged, PC-TALK.BAS
+
+	will no longer run on a system with 64K of memory.
+
+
+	PC-TALK.EXE can be compiled directly from PC-TALK.BAS, as all
+
+	timing functions are handled independently through the BASIC
+
+	SOUND and TIME$ functions.
+
+
+	Once PC-TALK.BAS has been saved in ASCII format, it can be
+
+	compiled using the IBM BASIC Compiler with the following commands:
+
+
+		  BASCOM PC-TALK.BAS /E/O/S/C:4096
+		  LINK PC-TALK+IBMCOM
+
+
+	The '4096' argument determines the size of the communications
+
+	buffer and can be increased if you have sufficient memory.  For
+
+	all but the most demanding applications, however, the 4096-byte
+
+	buffer should be more than sufficient.
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 64
+
+
+
+		  ---------------------------------------------
+
+
+
+	Copying PC-TALK --
+
+
+	You are encouraged to make copies of PC-TALK III and distribute
+
+	them to other users, within the terms of the limited license set
+
+	forth below.  A special batch file has been provided for this
+
+	purpose.
+
+
+	To copy PC-TALK III, insert the program disk in drive A.  From
+
+	the DOS A> prompt, type 'COPYTALK' <Enter> and follow the
+
+	prompts.   If you do copy PC-TALK for other users, please be sure
+
+	to provide them with the PC-TALK.DOC and PRINTDOC.BAT files.
+
+		  ---------------------------------------------
+
+
+
+	Modifying PC-TALK --
+
+
+	Please note that this version of PC-TALK makes use of virtually
+
+	all the memory available on a 64K system when running the
+
+	interpreter BASIC version (PC-TALK.BAS).  Adding any modifica-
+
+	tions will exceed the memory capacity for 64K machines.
+
+
+	This version of PC-TALK has incorporated the suggestions of many
+
+	users who made modifications to earlier versions.  Some of these
+
+	earlier modifications were posted on bulletin boards and became,
+
+	in effect, "standard" modifications to the earlier program.
+
+
+	There are still many more useful modifications which could be
+
+	made, and we would like to encourage this grassroots improvement
+
+	process.  The only "dangers" are of different people writing
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 65
+
+
+
+	modifications which overlap or are inconsistent, and, of course,
+
+	people unwittingly writing bugs into the program.
+
+
+	You are free to modify PC-TALK as you wish to suit your personal
+
+	needs.	One of the goals in creating PC-TALK was to produce a
+
+	program in easily modifiable BASIC. We do request, however, that
+
+	you do not distribute PC-TALK in modified form.  The reason for
+
+	this is that when people have problems or questions, they
+
+	inevitably contact us, and we have no way of knowing what
+
+	modifications may have been made.
+
+
+	If you do come up with useful modifications, please keep them as
+
+	separate MERGE files which can be incorporated into PC-TALK.BAS
+
+	at the user's option.
+
+
+	To facilitate this process of creating mergeable mods, we would
+
+	appreciate your sending us copies of your mods (on disk, if they
+
+	are substantial).  In certain cases, we may want to endorse
+
+	certain mods and "officially" reserve expansion areas for them.
+
+	Program lines from 10000 up have specifically been reserved for
+
+	this purpose.
+
+
+	Please understand that our reason for suggesting that we might
+
+	"approve" certain modifications is not in any way meant to
+
+	inhibit your insights or creativity.  To the contrary, we're
+
+	greatly appreciative of the improvements which have been made to
+
+	the program so far, and we would merely like to make it easier
+
+	for more people to share in future improvements.
+
+		  ---------------------------------------------
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 66
+
+
+
+
+	Thank You!
+
+
+	While on the subject on user mods, I would like to express my
+
+	thanks to Larry Jordan, Rich Schinnell, Wes Merchant, Don
+
+	Winthrow, and the Capital PC Users Group for their many
+
+	suggestions, contributions, and continued support.
+
+
+	John O'Boyle of United Technologies has been particularly helpful
+
+	and encouraging in developing version III and in championing the
+
+	Freeware concept.  Thanks also to Phil Ryals of Bank of America
+
+	and to Joe Doran of GCA Corporation for their programming insights.
+
+
+	Thanks to Jeremy Joan Hewes for being my trusty cohort and dear
+
+	friend from the very beginning of this adventure and to Larry Magid
+
+	and Stu Schwartz for their tireless beta testing and for never being
+
+	satisfied.  And special thanks to Patricia Smith for her loyal support
+
+	and excellent work.
+
+
+	Finally, thank you to the entire PC Community for your many words
+
+	of encouragement and your financial support.  PC-TALK and
+
+	Freeware started as an experiment.  It seems to have worked
+
+	beyond what anyone suspected.  I hope that you find this version
+
+	of PC-TALK to be more useful and just as friendly as the prior
+
+	versions, and that we continue to find ways to share our
+
+	adventures in computing.
+
+
+				     -- Andrew Fluegelman
+
+		  ---------------------------------------------
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 67
+
+
+
+
+						tm
+	======================== F R E E W A R E =======================
+
+			     User-Supported Software
+
+	    If you have received this program from another user and
+	  find it of value, your $35 contribution will be appreciated.
+
+			     === F r e e w a r e ===
+			    The Headlands Press, Inc.
+			       Post Office Box 862
+				Tiburon, CA 94920
+
+		 Regardless of whether you make a contribution,
+	   you are encouraged to copy this program as described below.
+
+		  ---------------------------------------------
+
+
+	FREEWARE user-supported software is an experiment in distributing
+	computer programs, based on three principles:
+
+	First, that the value and utility of software is best assessed by
+	the user on his/her own system.  Only after using a program can
+	one really determine whether it serves personal applications,
+	needs, and tastes.
+
+	Second, that the creation of independent personal computer
+	software can and should be supported by the computing community.
+
+	Finally, that copying of programs should be encouraged,
+	rather than restricted. The ease with which software can be
+	distributed outside traditional commercial channels reflects the
+	strength, rather than the weakness, of electronic information.
+
+
+	The user-supported concept:
+
+	Anyone may request a copy of a user-supported program by sending
+	a blank, formatted disk to the program author together with an
+	addressed, postage-paid return mailer. A copy of the program,
+	with documentation, will be sent by return mail on the user's disk.
+
+	The program carries a notice suggesting a contribution for the
+	program. Making a contribution is voluntary on the part of the user.
+
+	The program may also be ordered by mail for an advance contribution.
+
+	Regardless of whether a contribution is made, the user is encouraged
+	to copy the program for trial use by others on a private, non-
+	commercial basis.  Payment for use is discretionary on the part of
+	each subsequent user.
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 68
+
+
+
+
+	Will the user-supported concept really work?
+
+	Up to now, distribution of software has relied either on
+	restricting access (and charging for the cost of doing so), or
+	anonymously casting programs into the public domain.  The user-
+	supported concept is a way for the computing community to support
+	and encourage creative work outside the traditional marketplace.
+
+	This is an experiment in economics more than altruism. Free
+	distribution of software and voluntary payment for its use
+	eliminates the need for money to be spent on marketing,
+	advertising, and copy protection schemes. Users can obtain
+	quality software at reduced cost, while still supporting program
+	authors.  And the most useful programs survive, based purely on
+	their usefulness.
+
+
+	Please join the experiment.
+
+	FREEWARE is the trademark of The Headlands Press for its user-
+	supported software, but we invite all software authors to
+	participate in this distribution concept.
+
+	We would like to publish a FREEWARE CATALOG of user-supported
+	software by program authors who are willing to make their work
+	available on a free, non-restricted basis. If you would like your
+	program listed, please send a description of the program
+	(including system requirements) and the address to which requests
+	for copies should be sent. Fulfilling requests and suggesting
+	contributions are the sole responsibility of each program author.
+	Listings in the catalog are free.
+
+	We welcome your comments about the user-supported concept.
+	Thank you for your support.
+
+	Andrew Fluegelman
+	Freeware
+
+		 ----------------------------------------------------
+    *** NOTICE:  Users of this program are granted a limited license to
+	make copies of this program for trial use by others on a private,
+	non-commercial basis.
+
+	This limited license does not include --
+
+	1. distributing this program in connection with any other product
+	2. making the program available for any consideration or 'disk fee'
+	3. posting the program for public access via telecommunications or
+	4. distributing the program in modified form.
+
+	Please cooperate.
+	Copyright (c) 1984 The Headlands Press, Inc.
+		 ----------------------------------------------------
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 69
+
+
+
+
+	Appendix A: A Brief Explanation of Communications Parameters
+
+
+	The communications "parameters" are simply values that specify
+	how data is to be sent.  The "baud rate" determines the speed of
+	transmission--300 baud transmits at 300 bits per second (bps).
+	Since it usually takes 10 bits to transmit one character, 300 bps
+	is a transmission rate of approximately 30 characters per second.
+	A rate of 1200 bps is four times as fast--about 120 characters per
+	second.  (Your modem must be able to support the baud rate you
+	select.)
+
+
+	As mentioned, it usually takes a stream of 10 bits to transmit
+	one ASCII character.  One of these 10 bits can be designated as a
+	"parity" bit.  The value of this bit can be set so that, together
+	with the other data bits (described below), the number of the data
+	and parity bits is either "even" or "odd." The parity bit can also be
+	set to be always one ("mark parity") or always zero ("space parity").
+	If you have chosen to communicate with 8 data bits rather than 7 data
+	bits (see next paragraph), there is no "room" for a parity bit,
+	and so you must specify "no" parity.
+
+
+	You can choose to communicate with various numbers of data bits.
+	The most common values are 7 data bits, which allow you to send
+	any of the 127 standard ASCII characters, or 8 data bits, which
+	allow you to send an extended ASCII set of 255 characters.
+
+
+	For every character transmitted, the communications program sends
+	1 "start" bit.  You have no option to vary this number.  However,
+	you can specify how many "stop" bits are to be sent.  There must
+	be at least 1 stop bit, and this is the most common value.
+
+	For meaningful communications to occur, both computers must be
+	operating using the same parameters.  This is why it is important
+	to know the parameters of the remote computer and why the commu-
+	nications program must be able to set specified parameters.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 70
+
+
+
+
+
+	Appendix B: A Brief Description of the XMODEM Protocol
+
+
+	Once the protocol is put into effect ("Holding for Start..."),
+	the transmitter waits for the receiver to send an NAK character
+	(ASCII 21).  Meanwhile, the receiver sends NAK signals every ten
+	seconds.  Once the transmitter detects an NAK, it starts to send
+	the file in sections of 128 bytes.
+
+
+	Actually, more than 128 bytes are sent for each block. At the
+	beginning of the block is an SOH character (ASCII 01), followed
+	by the ASCII character representing the block number, followed by
+	the ASCII character of the "one's complement" of the block
+	number. Then the 128 bytes of the file are sent. Finally, the
+	block concludes with an ASCII character representing the sum of
+	the ASCII values of the 128 bytes sent (the "checksum"
+	character).
+
+
+	The receiver checks the block to verify that everything is in
+	order.	First it makes sure that the block started with an SOH.
+	Then it makes sure that the block number is correct.  Then it
+	performs its own calculations on the 128 data bytes and compares
+	its own checksum with the one received from the transmitter.
+
+
+	If everything is in order, the receiver sends an ACK character
+	(ASCII 06) to the transmitter, indicating that the next block is
+	to be sent. If the receiver can't verify, it sends an NAK,
+	requesting that the block be sent again.  This continues, block
+	by block, until the entire file has been sent and verified.
+
+
+	At the end of the file, the transmitter sends an EOT character
+	(ASCII 04).  The receiver acknowledges the EOT with an ACK, and
+	the transfer terminates.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+		       --- PC-TALK III User's Guide ---                 71
+
+
+
+        Some companies and organizations have requested that we 
+
+        provide an invoice for copies of PC-TALK III.  Please feel 
+
+        free to complete the following when submitting your payment 
+
+        for use of PC-TALK III.
+
+
+
+
+
+                                   INVOICE
+
+
+        SOLD TO:
+
+        address:
+
+
+
+
+
+
+        ____ copies PC-TALK III @ $35.00 per copy
+
+
+
+						TOTAL   $__________.
+
+
+
+        The Headlands Press, Inc.
+
+        Post Office Box 862
+
+        Tiburon, CA, 94920
+
+
+
+
+        (Site licenses for use of PC-TALK III in quantity are 
+
+        available upon request.  Please contact us at (415) 435-0770.)
+
+
+
+
+
+
+
+
+
+
+
+
+	      --- FREEWARE - P.O. Box 862, Tiburon, CA 94920 ---
+
+
+
+
+
+
+
+
+
+
+	     === Finished printing the PC-TALK III User's Guide ===
+
+                                                                                                                                                                                                                                                                
